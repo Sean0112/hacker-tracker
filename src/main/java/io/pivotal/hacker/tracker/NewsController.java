@@ -16,26 +16,31 @@ import java.util.Arrays;
 @Controller
 public class NewsController {
 
+    String[] top10urls = new String[10];
+    String[] top10titles = new String[10];
+
+    @Autowired
+    RestTemplate restTemplate = new RestTemplate();
 
     @GetMapping("/")
     public ModelAndView showNews() {
-        NewsInfo news = new NewsInfo("url1 test", "title1 test");
+        String sU = "this is a url";
+        String sT = "this is a title";
 
+        setTitlesAndIds();
+
+        NewsInfo news = new NewsInfo(top10urls[0], top10titles[0]);
         ModelAndView modelAndView = new ModelAndView("show-news");
         modelAndView.getModel().put("newsInfo", news);
+
+        NewsInfo news1 = new NewsInfo(top10urls[1], top10titles[1]);
+        //ModelAndView modelAndView = new ModelAndView("show-news");
+        modelAndView.getModel().put("newsInfo1", news1);
 
         return modelAndView;
     }
 
 
-    String[] top10titles = new String[10];
-    String[] top10urls = new String[10];
-
-    @Autowired
-    RestTemplate restTemplate = new RestTemplate();
-
-
-    //@GetMapping("/")
     public void setTitlesAndIds() {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));

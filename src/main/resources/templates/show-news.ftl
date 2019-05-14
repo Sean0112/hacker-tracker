@@ -5,9 +5,14 @@
 </head>
 <body>
 
-<h1>Hi Mom!</h1>
-<p>Hello world</p>
-<a href="${newsInfo.url}">${newsInfo.title}</a>
+<a href=>${newsInfo.title}</a>
+<br>
+<a href=url>${newsInfo.url}</a>
+<br><br>
 
+<a href=>${newsInfo1.title}</a>
+<br>
+<a href=url>${newsInfo1.url}</a>
+<br><br>
 </body>
 </html>
