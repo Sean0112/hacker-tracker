@@ -25,9 +25,5 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
-    compile("org.freemarker:freemarker:2.3.14")
-    compile("org.json:json:20180813")
+    compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVersion")
 }
-
-// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-freemarker
-//compile group: 'org.springframework.boot', name: 'spring-boot-starter-freemarker', version: '2.1.4.RELEASE'
