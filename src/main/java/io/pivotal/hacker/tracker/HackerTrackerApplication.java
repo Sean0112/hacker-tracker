@@ -10,11 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class HackerTrackerApplication {
 
     public static void main(String[] args) {
-//        NewsController newsController = new NewsController();
-//        newsController.setTitlesAndIds();
-
         SpringApplication.run(HackerTrackerApplication.class, args);
-
     }
 
     @Bean

@@ -26,4 +26,5 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-freemarker:$springBootVersion")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-json-org:2.9.8")
 }
